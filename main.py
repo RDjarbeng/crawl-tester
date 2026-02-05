@@ -1,15 +1,23 @@
 import asyncio
+import argparse
+from datetime import datetime
 from crawl4ai import AsyncWebCrawler, BrowserConfig
 from crawl4ai import CrawlerRunConfig
 
 async def main():
+    parser = argparse.ArgumentParser(description='Crawl a website and save output.')
+    parser.add_argument('--output', type=str, default='output', help='Base filename for the output')
+    args = parser.parse_args()
+
     async with AsyncWebCrawler(verbose=True) as crawler:
         config = CrawlerRunConfig()
-        result = await crawler.arun(url="https://rdjarbeng.com/personal", crawler_config=config)
+        result = await crawler.arun(url="https://rdjarbeng.com/gallery", crawler_config=config)
         if result is not None:
-            with open("output.md", "w", encoding="utf-8") as f:
+            timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+            filename = f"{args.output}_{timestamp}.md"
+            with open(filename, "w", encoding="utf-8") as f:
                 f.write(result.markdown)
-            print("Successfully saved crawl output to output.md")
+            print(f"Successfully saved crawl output to {filename}")
         else:
             print("Crawler returned no result.")
 
