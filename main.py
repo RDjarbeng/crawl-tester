@@ -11,7 +11,7 @@ async def main():
 
     async with AsyncWebCrawler(verbose=True) as crawler:
         config = CrawlerRunConfig()
-        result = await crawler.arun(url="https://rdjarbeng.com/gallery", crawler_config=config)
+        result = await crawler.arun(url="http://rdjarbeng.com", crawler_config=config)
         if result is not None:
             timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
             filename = f"{args.output}_{timestamp}.md"
