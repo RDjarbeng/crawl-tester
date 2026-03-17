@@ -2,6 +2,23 @@
 
 A powerful web crawler tool that extracts website content and converts it to Markdown format. Perfect for analyzing how search engines, AI agents, and bots perceive your website structure.
 
+## Example crawl on site [rdjarbeng.com](https://rdjarbeng.com/) produces these lines (showed just first few lines)
+```
+[ ![Site Logo](https://rdjarbeng.com/assets/images/logo-small.png) ](https://rdjarbeng.com/)
+[Posts](https://rdjarbeng.com/posts) [Personal](https://rdjarbeng.com/personal) [ Gallery ](https://rdjarbeng.com/gallery) [About](https://rdjarbeng.com/about)
+# Richard Djarbeng's Blog
+Occasion Spotlight
+# Ghana, an Introduction- All That Glitters is Still Gold
+Celebrating the 69th Independence Day of Ghana. Explore the rich culture, history, and golden opportunities of the first sub-Saharan nation to gain independence. 
+[Read the Post](https://rdjarbeng.com/personal/a-country-called-ghana/)
+![Happy 69th Independence Day Ghana](https://rdjarbeng.com/assets/images/posts/happy_indepence_ghana_post_cover.png)
+## Latest Posts
+[Tags](https://rdjarbeng.com/tags/) | [Categories](https://rdjarbeng.com/categories/)
+[ ![Flat vector illustration of AI parsing news reports for flood warnings](https://rdjarbeng.com/assets/images/posts/covers/google_flood_cover.jpg) How Google Turned 5 Million News Articles into a Flash Flood Warning System  13 March 2026 · 7 min read  ](https://rdjarbeng.com/how-google-turned-5-million-news-articles-into-a-flash-flood-warning-system/)
+[ ![AI Bill vs Headcount Costs illustration](https://rdjarbeng.com/assets/images/posts/covers/ai_bill_headcount_cover.jpg) Why Your Monthly AI Bill Might Soon Rival Your Headcount Costs From A Personal Experience  6 March 2026 · 2 min read  ](https://rdjarbeng.com/why-your-monthly-ai-bill-might-soon-rival-your-headcount-costs-from-a-personal-experience/)
+[ ![Illustration of a structural gate blocking a claw with text The OpenClaw Ban Wave](https://rdjarbeng.com/assets/images/google_bans_antigravity_v2.png) Google Bans Hundreds of Paying Antigravity Users for Using OpenClaw - Then Says "We Heard You"  2 March 2026 · 3 min read  ](https://rdjarbeng.com/google-bans-hundreds-of-paying-antigravity-users-for-using-openclaw-then-says-we-heard-you/)
+```
+
 ## 📋 Overview
 
 Crawl Tester is a Python-based web crawler that helps you understand how your website appears to search engines and AI agents. It crawls a given URL and outputs the extracted content as clean, well-formatted Markdown, allowing you to verify that your site structure, metadata, and content are properly accessible to bots and agents.
