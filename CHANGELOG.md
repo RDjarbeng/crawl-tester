@@ -5,6 +5,26 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.1.0] - 2026-04-01
+
+### Added
+- New `--url` parameter for specifying custom URLs to crawl
+- Default URL changed to `https://rdjarbeng.com` for easier testing
+- Improved help descriptions for command-line arguments
+
+### Changed
+- Command-line interface now fully configurable with both `--url` and `--output` parameters
+- Updated argument parser description for clarity
+
+### Usage
+```bash
+# Crawl specific URL and save to custom file
+python main.py --url https://example.com --output my_crawl
+
+# Use defaults (crawls rdjarbeng.com, saves to output_*.md)
+python main.py
+```
+
 ## [1.0.0] - 2025-03-16
 
 ### Added
