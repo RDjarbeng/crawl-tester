@@ -5,13 +5,14 @@ from crawl4ai import AsyncWebCrawler, BrowserConfig
 from crawl4ai import CrawlerRunConfig
 
 async def main():
-    parser = argparse.ArgumentParser(description='Crawl a website and save output.')
-    parser.add_argument('--output', type=str, default='output', help='Base filename for the output')
+    parser = argparse.ArgumentParser(description='Crawl a website and save output as Markdown.')
+    parser.add_argument('--url', type=str, default='https://rdjarbeng.com', help='URL to crawl (default: https://rdjarbeng.com)')
+    parser.add_argument('--output', type=str, default='output', help='Base filename for the output (default: output)')
     args = parser.parse_args()
 
     async with AsyncWebCrawler(verbose=True) as crawler:
         config = CrawlerRunConfig()
-        result = await crawler.arun(url="http://rdjarbeng.com", crawler_config=config)
+        result = await crawler.arun(url=args.url, crawler_config=config)
         if result is not None:
             timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
             filename = f"{args.output}_{timestamp}.md"
