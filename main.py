@@ -6,8 +6,8 @@ from crawl4ai import CrawlerRunConfig
 
 async def main():
     parser = argparse.ArgumentParser(description='Crawl a website and save output as Markdown.')
-    parser.add_argument('--url', type=str, default='https://rdjarbeng.com', help='URL to crawl (default: https://rdjarbeng.com)')
-    parser.add_argument('--output', type=str, default='output', help='Base filename for the output (default: output)')
+    parser.add_argument('--url', type=str, default='https://rdjarbeng.com/', help='URL to crawl (default: https://rdjarbeng.com)')
+    parser.add_argument('--output', type=str, default='output-new', help='Base filename for the output (default: output)')
     args = parser.parse_args()
 
     async with AsyncWebCrawler(verbose=True) as crawler:
